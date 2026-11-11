@@ -1,0 +1,11 @@
+{
+  "date_utc": "2026-11-11",
+  "python_unittest": {
+    "passed": 10,
+    "failed": 0,
+    "command": "python -m unittest discover -s tests -v"
+  },
+  "powershell": "Sintaxis de scripts revisada. Roles y configuración IIS/AD DS no ejecutados.",
+  "browser": "PoC local: se detuvo WEB01, se observaron respuestas por WEB02, se reintegró WEB01, se importó requests.csv y se verificó el resumen. Sin errores de consola observados.",
+  "scope": "Estos resultados corresponden al prototipo portable de esta entrega; no son datos del laboratorio universitario."
+}

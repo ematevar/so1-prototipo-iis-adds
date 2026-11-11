@@ -1,0 +1,82 @@
+{
+  "source": "PoC HTTP portable; Python stdlib. NO es evidencia de IIS/ARR/AD DS.",
+  "started_utc": "2026-11-11T09:50:55.752+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.10",
+  "health_interval": 0.1,
+  "health_timeout": 0.2,
+  "failure_threshold": 2,
+  "passed": true,
+  "stages": {
+    "WEB01_restarted": {
+      "requests": 20,
+      "failed": 0,
+      "nodes": [
+        "WEB01",
+        "WEB02"
+      ],
+      "p95_ms": 29.068
+    },
+    "WEB01_stopped": {
+      "requests": 30,
+      "failed": 2,
+      "nodes": [
+        "WEB01",
+        "WEB02"
+      ],
+      "p95_ms": 205.673
+    },
+    "baseline_two_backends": {
+      "requests": 20,
+      "failed": 0,
+      "nodes": [
+        "WEB01",
+        "WEB02"
+      ],
+      "p95_ms": 42.824
+    },
+    "both_stopped": {
+      "requests": 5,
+      "failed": 5,
+      "nodes": [
+        "NONE",
+        "WEB01",
+        "WEB02"
+      ],
+      "p95_ms": 216.51
+    }
+  },
+  "events": [
+    {
+      "utc": "2026-11-11T09:50:55.665+00:00",
+      "node": "WEB01",
+      "action": "start"
+    },
+    {
+      "utc": "2026-11-11T09:50:55.666+00:00",
+      "node": "WEB02",
+      "action": "start"
+    },
+    {
+      "utc": "2026-11-11T09:50:57.306+00:00",
+      "node": "WEB01",
+      "action": "stop"
+    },
+    {
+      "utc": "2026-11-11T09:50:59.736+00:00",
+      "node": "WEB01",
+      "action": "start"
+    },
+    {
+      "utc": "2026-11-11T09:51:01.033+00:00",
+      "node": "WEB01",
+      "action": "stop"
+    },
+    {
+      "utc": "2026-11-11T09:51:01.037+00:00",
+      "node": "WEB02",
+      "action": "stop"
+    }
+  ],
+  "scope": "Ensayo corto local con puertos efímeros; no satisface la campaña de 300 s ni las pruebas de dominio de la Unidad III."
+}

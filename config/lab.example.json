@@ -1,0 +1,15 @@
+{
+  "domain": "ad.so1.test",
+  "portal": "portal.ad.so1.test",
+  "network": {"prefixLength": null, "gateway": null},
+  "nodes": [
+    {"name":"DC01","host":"HOST01","ip":null,"role":"AD DS / DNS"},
+    {"name":"WEB01","host":"HOST01","ip":null,"role":"IIS"},
+    {"name":"LB01","host":"HOST01","ip":null,"role":"IIS / ARR"},
+    {"name":"DC02","host":"HOST02","ip":null,"role":"AD DS / DNS"},
+    {"name":"WEB02","host":"HOST02","ip":null,"role":"IIS"},
+    {"name":"CLIENT01","host":"HOST02","ip":null,"role":"Medición"}
+  ],
+  "vmDefaults": {"ramGB":4,"vCPU":2,"diskGB":60},
+  "note":"Completar seis IP adicionales autorizadas y máscara. No son las IP de los anfitriones."
+}
